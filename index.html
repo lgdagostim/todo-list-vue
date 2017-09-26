@@ -40,16 +40,16 @@
                                     </div>
                                 </td>
                                 <td class="clearfix float-right">
-                                    <button class="btn btn-action circle"><i class="icon icon-check"></i></button>
-                                    <button class="btn btn-action circle"><i class="icon icon-edit"></i></button>
-                                    <button class="btn btn-action"><i class="icon icon-delete"></i></button>
+                                    <button v-bind:title="hint_complete" class="btn btn-action circle bg-success"><i class="icon icon-check"></i></button>
+                                    <button v-bind:title="hint_edit" class="btn btn-action circle"><i class="icon icon-edit"></i></button>
+                                    <button v-bind:title="hint_delete" class="btn btn-action"><i class="icon icon-delete"></i></button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="card-footer float-right">
                         <div class="card-subtitle text-gray">
-                            developed by: <a target="_blank" href="www.lgdagostim.tk">LGDAGOSTIM</a>
+                            developed by <a target="_blank" href="http://www.lgdagostim.tk">LGDAGOSTIM</a>
                         </div>
                     </div>
                 </div>
