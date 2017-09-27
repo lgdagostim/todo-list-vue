@@ -12,15 +12,38 @@
 
 <body>
     <section class="main">
-        <div class="bg-gray text-center p-2 title">
+        <div class="bg-gray text-center p-2 title text-bold">
             <h2>Simple To-do List</h2>
             <p>Spectre.css ++ Vue.js.</p>
         </div>
         <section id="app">
             <div class="container">
                 <div class="columns col-gapless">
-                    <div class="column col-3"></div>
-                    <div class="column col-6">
+                    <div class="column col-2 col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+                    <div class="column col-2 hide-xs hide-sm col-md-3 col-lg-3 col-xl-3">
+                        <ul class="menu">
+                            <li class="menu-item">
+                                <div class="tile tile-centered">
+                                    <div class="tile-icon">
+                                        <img src="img/avatar.jpg" class="avatar" alt="Avatar">
+                                    </div>
+                                    <div class="tile-content">
+                                        User name
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <div id="menu_items">
+                                <li class="menu-item">
+                                    <div class="menu-badge">
+                                        <label class="label label-primary">2</label>
+                                    </div>
+                                    <a href="#"><i class="icon icon-link"></i> Settings </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="column col-6 col-xs-10 col-sm-10 col-md-7 col-lg-7 col-xl-7">
                         <div class="card outer-shadow">
                             <div class="card-header">
                                 <div class="card-title h5">Today</div>
@@ -52,12 +75,12 @@
                             </table>
                             <div class="card-footer centered">
                                 <div class="card-subtitle textdarkgray">
-                                    developed by <a target="_blank" class="text-bold" href="http://www.lgdagostim.tk">LGDAGOSTIM</a>
+                                    developed by <a target="_blank" class="text-bold" href="https://github.com/lgdagostim">LGDAGOSTIM</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="column col-3"></div>
+                    <div class="column col-2 col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
                 </div>
             </div>
         </section>
@@ -65,7 +88,7 @@
 </body>
 <!--<script src="https://unpkg.com/vue"></script>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/vue.js"></script>
+<script src="js/vue.min.js"></script>
 <script src="js/app.js"></script>
 
 </html>
