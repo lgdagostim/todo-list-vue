@@ -50,10 +50,10 @@
                                 <div class="card-subtitle text-gray">{{today}}</div>
                             </div>
                             <div class="card-body">
-                                <input type="text" class="form-input" placeholder="Put a new task here">
+                                <input @keyup.enter="addTask" v-model="newTask" type="text" class="form-input" placeholder="Put a new task here">
                             </div>
                             <div class="card-footer">
-                                <button class="btn btn-default"><i class="icon icon-plus"></i> Add new task</button>
+                                <button class="btn btn-default" v-on:click="addTask"><i class="icon icon-plus"></i> Add new task</button>
                             </div>
                         </div>
                         <div class="card outer-shadow">
