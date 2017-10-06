@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Vue.js ++ Spectre.css</title>
@@ -50,7 +49,7 @@
                                 <div class="card-subtitle text-gray">{{today}}</div>
                             </div>
                             <div class="card-body">
-                                <input @keyup.enter="addTask" v-model="newTask" type="text" class="form-input" placeholder="Put a new task here">
+                                <input @keyup.enter="addTask" v-model="newTask" autofocus type="text" class="form-input" placeholder="Put a new task here">
                             </div>
                             <div class="card-footer">
                                 <button class="btn btn-default" v-on:click="addTask"><i class="icon icon-plus"></i> Add new task</button>
@@ -62,13 +61,19 @@
                                     <tr v-for="todo in todos">
                                         <td>
                                             <div class="form-group">
-                                                <i class="form-icon"></i> {{todo.text}}
+                                                <label class="form-switch">
+                                                    <input type="checkbox">
+                                                    <i class="form-icon" v-bind:title="hint_complete"></i>  {{todo.text}}  
+                                                </label>
                                             </div>
                                         </td>
                                         <td class="clearfix float-right">
-                                            <button v-bind:title="hint_complete" class="btn btn-action circle bg-success"><i class="icon icon-check"></i></button>
-                                            <button v-bind:title="hint_edit" class="btn btn-action circle"><i class="icon icon-edit"></i></button>
-                                            <button v-bind:title="hint_delete" class="btn btn-action"><i class="icon icon-delete"></i></button>
+                                            <button v-bind:title="hint_edit" class="btn btn-action circle">
+                                                <i class="icon icon-edit"></i>
+                                            </button>
+                                            <button @click="removeTask(task)" v-bind:title="hint_delete" class="btn btn-action">
+                                                <i class="icon icon-delete"></i>
+                                            </button>
                                         </td>
                                     </tr>
                                 </tbody>

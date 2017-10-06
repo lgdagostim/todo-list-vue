@@ -17,7 +17,13 @@ var app = new Vue({
                 this.todos.push({
                     text: task
                 });
+                this.newTask = '';
+                toastr.success('New task added to the task list !!!')
             }
+        },
+        removeTask: function(todo){
+            var index = this.todos.indexOf(todo);
+            this.tasks.splice(index, 1);
         }
     }
 });

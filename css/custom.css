@@ -11,9 +11,10 @@ html {
 table td {
     white-space: nowrap;
 }
-
-table td:first-child {
-    width: 100%;
+table td label{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 80%
 }
 
 .title {
